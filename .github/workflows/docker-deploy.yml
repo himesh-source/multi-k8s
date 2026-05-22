@@ -23,7 +23,6 @@ jobs:
       - name: Build production images
         run: |
           docker build -t himesh2247/multi-client ./client
-          docker build -t himesh2247/multi-nginx ./nginx
           docker build -t himesh2247/multi-server ./server
           docker build -t himesh2247/multi-worker ./worker
 
@@ -36,6 +35,5 @@ jobs:
       - name: Push images to Docker Hub
         run: |
           docker push himesh2247/multi-client
-          docker push himesh2247/multi-nginx
           docker push himesh2247/multi-server
           docker push himesh2247/multi-worker
